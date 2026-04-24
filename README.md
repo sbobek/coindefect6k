@@ -1,4 +1,4 @@
-# Coindefect6k
+# CoinDefect6k
 
 
 ## Content
@@ -27,7 +27,7 @@ After that, run other requirements install
 pip install -r requirements.txt
 ```
 
-## Structure
+## Data and directory struucture
 
 It is assumed that the notebooks are locate in the folder that contains datasets obtained from Zenodo, and have following structure.
 **Note that the `dataset_public_manufacturing_defects` is nesten in another `dataset_public_manufacturing_defects`** and similarly in the circulating defects version.
@@ -52,4 +52,22 @@ dataset_public_circulation_quality
     │   └── good
     └── train
         └── good
+```
+
+The easiest way to achieve this is to execute following:
+
+```
+git clone https://github.com/sbobek/coindefect6k
+cd coindefect6k
+
+set -euo pipefail
+
+wget -O dataset_public_circulation_quality.zip "https://zenodo.org/api/records/18773634/files/dataset_public_circulation_quality.zip/content"
+wget -O dataset_public_manufacturing_defects.zip "https://zenodo.org/api/records/18773634/files/dataset_public_manufacturing_defects.zip/content"
+
+mkdir -p dataset_public_circulation_quality dataset_public_manufacturing_defects
+
+unzip -q dataset_public_circulation_quality.zip -d dataset_public_circulation_quality
+unzip -q dataset_public_manufacturing_defects.zip -d dataset_public_manufacturing_defects
+
 ```
