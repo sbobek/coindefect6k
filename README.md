@@ -35,21 +35,21 @@ It is assumed that the notebooks are locate in the folder that contains datasets
 For manufacturing defects:
 ```
 dataset_public_manufacturing_defects
-├── dataset_public_manufacturing_defects
-│   ├── test
-│   │   ├── bad
-│   │   └── good
-│   └── train
-│       └── good
+└── dataset_public_manufacturing_defects
+    ├── test
+    │   ├── bad
+    │   └── good
+    └── train
+        └── good
 ```
 
 For circulation defects:
 ```
 dataset_public_circulation_quality
-├── dataset_public_circulation_quality
-│   ├── test
-│   │   ├── bad
-│   │   └── good
-│   └── train
-│       └── good
+└── dataset_public_circulation_quality
+    ├── test
+    │   ├── bad
+    │   └── good
+    └── train
+        └── good
 ```
